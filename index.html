@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini Juego de Naves</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main id="app">
+      <h1>Mini Juego de Naves</h1>
+      <div id="game-container">
+        <canvas id="gameCanvas" aria-label="Zona de juego" tabindex="0"></canvas>
+        <section id="hud" class="overlay">
+          <div class="hud-row">
+            <span class="hud-label">Vidas:</span>
+            <span id="lives-value" class="hud-value">3</span>
+            <span class="hud-label">Puntos:</span>
+            <span id="score-value" class="hud-value">000000</span>
+            <span class="hud-label">Máximo:</span>
+            <span id="best-value" class="hud-value">000000</span>
+            <span class="hud-label">Nivel:</span>
+            <span id="level-value" class="hud-value">1</span>
+            <span id="shot-level-indicator" class="hud-power hud-power--hidden">
+              <span id="shot-level-icon" class="power-icon">x2</span>
+              <span id="shot-level-timer" class="power-timer">0</span>
+            </span>
+            <span id="missile-indicator" class="hud-power hud-power--missile hud-power--hidden">
+              <span class="power-icon">MSL</span>
+              <span id="missile-timer" class="power-timer">0</span>
+            </span>
+          </div>
+          <div class="hud-row">
+            <p id="messages" class="hud-message">P pausa • R reinicia • F pantalla completa • Click dispara</p>
+            <div class="hud-actions">
+              <button id="fullscreen-toggle" type="button" class="hud-button">Pantalla: Normal</button>
+              <button id="mute-toggle" type="button" class="hud-button">Sonido: Activo</button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <p class="help-text">
+        Usa el mouse para mover al gato espacial. Mantén clic izquierdo para disparar; recoge power-ups para activar disparo x2 y misiles guiados. P para pausar, R reinicia, F alterna pantalla completa.
+      </p>
+    </main>
+    <script src="main.js"></script>
+  </body>
+</html>
