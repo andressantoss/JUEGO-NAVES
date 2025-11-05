@@ -11,6 +11,7 @@
       <h1>Mini Juego de Naves</h1>
       <div id="game-container">
         <canvas id="gameCanvas" aria-label="Zona de juego" tabindex="0"></canvas>
+        <div class="touch-overlay" aria-hidden="true"></div>
         <section id="hud" class="overlay">
           <div class="hud-row">
             <span class="hud-label">Vidas:</span>
@@ -33,6 +34,16 @@
           <div class="hud-row">
             <p id="messages" class="hud-message">P pausa • R reinicia • F pantalla completa • Click dispara</p>
             <div class="hud-actions">
+              <label class="hud-button hud-select" for="quality-select">
+                Calidad
+                <select id="quality-select" class="hud-select__input">
+                  <option value="auto">Auto</option>
+                  <option value="ultra">Ultra</option>
+                  <option value="high">Alta</option>
+                  <option value="medium">Media</option>
+                  <option value="low">Baja</option>
+                </select>
+              </label>
               <button id="fullscreen-toggle" type="button" class="hud-button">Pantalla: Normal</button>
               <button id="mute-toggle" type="button" class="hud-button">Sonido: Activo</button>
             </div>
@@ -40,9 +51,9 @@
         </section>
       </div>
       <p class="help-text">
-        Usa el mouse para mover al gato espacial. Mantén clic izquierdo para disparar; recoge power-ups para activar disparo x2 y misiles guiados. P para pausar, R reinicia, F alterna pantalla completa.
+        Usa el mouse o las teclas WASD/Flechas para mover al gato espacial. Mantén clic izquierdo, la barra espaciadora o el botón táctil para disparar. Recoge power-ups para activar disparo x2 y misiles guiados. P pausa, R reinicia, F alterna pantalla completa y Q abre el selector de calidad.
       </p>
     </main>
-    <script src="main.js"></script>
+    <script type="module" src="main.js"></script>
   </body>
 </html>
